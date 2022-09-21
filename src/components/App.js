@@ -23,6 +23,7 @@ function App() {
             path="/add2list"
             element={<AddListItem props={[album, setAlbum]} />}
           />
+          {/* for all non-declared routes */}
           <Route path="*" element={<Fof />} />
         </Routes>
       </Router>

@@ -5,6 +5,7 @@ export default function DisplayList(props) {
   const [list, setList] = props.props;
   useEffect(() => {
     try {
+      // fetch almus data and add to list array
       fetch(API_URLS.albums())
         .then((response) => response.json())
         .then((json) => setList(json));
@@ -15,14 +16,13 @@ export default function DisplayList(props) {
 
   return (
     <div>
-      <h1 style={styles.heading}>All posts</h1>
+      <h1 style={styles.heading}>All Albums</h1>
       <div style={styles.box}>
         {list &&
           list.map((item, index) => {
             return <Album item={item} key={`album-${index}`} />;
           })}
       </div>
-      {console.log('list inside display : ', list)}
     </div>
   );
 }
