@@ -1,4 +1,4 @@
-import { React, useEffect } from 'react';
+import { React } from 'react';
 import { API_URLS } from '../utils';
 function AddListItem(props) {
   // get hook from props
